@@ -1,3 +1,5 @@
+//  ***********Code  transparent  show alert box *****
+
 import 'dart:io';
 import 'package:path/path.dart';
 
@@ -28,6 +30,9 @@ class _MyHomePageState extends State<MyHomePage> {
     var image = await ImagePicker.platform
         .pickImage(source: ImageSource.camera, imageQuality: 50);
     //  final fileName = path.basename(_image.path);
+    setState(() {
+      _image = image;
+    });
   }
 
   Future _imgFromGallery() async {
